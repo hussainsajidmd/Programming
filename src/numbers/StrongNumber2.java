@@ -1,6 +1,7 @@
+package numbers;
 import java.util.Scanner;
 
-public class StrongNumber1 {
+public class StrongNumber2 {
 	static int factorial(int n) {
 		int t=n; 
 		int fact=1;
@@ -14,18 +15,20 @@ public class StrongNumber1 {
 		Scanner input=new Scanner(System.in);
 		System.out.println("Enter the number.");
 		int num=input.nextInt();
-		int temp=num;
+		for(int i=1;i<=num;i++) {
+		int n=i;
 		int rem,sum=0;
-		while(num>0) {
-			rem=num%10;
+		int temp=n;
+		while(n>0) {
+			rem=n%10;
 			sum=sum+factorial(rem);
-			num=num/10;
+			n=n/10;
 		}
 		if(sum==temp) {
-			System.out.println(temp+" is a strong number.");
+			System.out.print(temp+" ");
 		}
-		else {
-			System.out.println(temp+" is not a strong number.");
 		}
 	}
 }
+
+

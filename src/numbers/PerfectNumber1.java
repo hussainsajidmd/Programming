@@ -1,3 +1,4 @@
+package numbers;
 import java.util.Scanner;
 /*
  * Enetered number is perfect number or not.

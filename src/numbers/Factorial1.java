@@ -1,6 +1,10 @@
+package numbers;
 import java.util.Scanner;
+/*
+ * Factorial of a entered value.
+ */
 
-public class Factorial2 {
+public class Factorial1 {
 	static void factorial(int n) {
 		int t=n;
 		int fact=1;
@@ -8,15 +12,16 @@ public class Factorial2 {
 			fact=fact*n;
 			n--;
 		}
-		System.out.println(t+"!------->"+fact);
+		System.out.println("The factorial value of "+t+" is "+fact+".");
 	}
+
 	public static void main(String[] args) {
 		Scanner input=new Scanner(System.in);
 		System.out.println("Enter the number to get its factorial value.");
 		int num=input.nextInt();
-		for(int i=1; i<=num;i++) {
-			factorial(i);
-		}
+		factorial(num);
 		input.close();
+
 	}
+
 }
