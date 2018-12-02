@@ -2,7 +2,7 @@ package numbers;
 import java.util.Scanner;
 
 
-public class Test2 {
+public class ArmstrongNumber {
 	static int countDigit(int num) {
 		int count=0;
 		while(num>0) {
