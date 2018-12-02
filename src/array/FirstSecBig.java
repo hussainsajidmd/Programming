@@ -2,7 +2,7 @@ package array;
 
 import java.util.Scanner;
 
-public class SmallestLarge {
+public class FirstSecBig {
 	public static void main(String[] args) 
 	{
 		Scanner input=new Scanner(System.in);
@@ -16,19 +16,20 @@ public class SmallestLarge {
 		for(int i=0;i<length;i++) {
 			System.out.println("arr["+i+"]------->"+arr[i]);
 		}
-		int large=arr[0];
-		int small=arr[0];
+		int flarge=arr[0]; 
+		int slarge=arr[1];  
 		
 		for(int i=1;i<length;i++) {
-			if(arr[i]>large) {
-				large=arr[i];
+			if(arr[i]>flarge) {
+				slarge=flarge;
+				flarge=arr[i];
 			}
-			if(arr[i]<small) {
-				small=arr[i];
+			if(arr[i]<slarge) {
+				slarge=arr[i];
 			}
 		}
-		System.out.println("Smallest number is "+small+".");
-		System.out.println("Largest number is "+large+".");
+		System.out.println("Smallest number is "+flarge+".");
+		System.out.println("Largest number is "+slarge+".");
 		
 }
 }
